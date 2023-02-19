@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <div class="container">
   <h1 class="page-title">
     Currency Converter
@@ -6,8 +6,68 @@
   <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
   <link rel="stylesheet" href="../src/style/style.css" >
   <script type="module" src="../src/js/test.js"></script> 
-</div>
+</div> 
 <a href="https://alura.com.br/" target="_blank">
   <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
   <img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png">
-</a>
+</a> -->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Currency Converter</title>
+		<!-- <meta name="description" content=""> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../src/style/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png">
+		<div class="container">
+			<h1 class="header">
+				Currency Converter
+			</h1>
+
+			<div class="currency-list">
+				<label for="mycurrencies">Your currency:</label>
+
+				<select name="MyCurrency" id="my_currency">
+					<option value="brl">BRL (Real)</option>
+					<option value="usd">USD (Dólar Americano)</option>
+					<option value="eur">EUR (Euro)</option>
+					<option value="gbp">GBP (Libra Esterlina)</option>
+				</select>
+				<!-- TODO: Review aligning -->
+				<label for="tocurrencies">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspConvert to:</label>
+				
+				<select name="ToCurrency" id="to_currency">
+					<option value="usd">USD (Dólar Americano)</option>
+					<option value="eur">EUR (Euro)</option>
+					<option value="gbp">GBP (Libra Esterlina)</option>
+					<option value="brl">BRL (Real)</option>
+				</select> 
+			</div>
+
+			<form id="form" class="form">
+				
+				<div class="form-control">
+					
+					<label for="value">Value</label>
+					<input type="text" id="value" placeholder="Type the value to convert...">
+					<i class="fas fa-exclamation-circle"></i>
+					<i class="fas fa-check-circle"></i>
+					<small>Informe um valor válido!</small>
+				</div>
+
+				<button type="submit">Convert</button>
+			</form>
+		</div>
+		<script src="../src/js/test.js"></script>
+		<script src="https://kit.fontawesome.com/71a8ecb1b6.js" crossorigin="anonymous"></script>
+	</body>
+</html>

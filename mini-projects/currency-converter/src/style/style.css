@@ -1,45 +1,147 @@
+* {
+  	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
 body {
-    font-family: "Roboto Mono", monospace;
-    text-align: center;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    /* font-family: "Roboto Mono", monospace; */
     background-image: url("https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Background.png");
     background-color: #000000;
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    height: 100vh;
-  }
-  
-  .container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .page-title {
-    color: #ffffff;
-    margin: 0 0 5px;
-  }
-  
-  .page-subtitle {
-    color: #ffffff;
-    margin-top: 5px;
-  }
-  
-  .page-logo {
-    width: 200px;
-  }
-  
-  .alura-logo {
-    width: 40px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  body > img {
-    margin: 0 10px;
-  }
-  
-  img {
-    max-height: 250px;
-  }
-  
+    /* height: 100vh; */
+}
+
+.container {
+	background: linear-gradient(180deg, #94f33b, #126e21 100%);
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	width: 400px;
+	max-width: 100%;
+	text-align: center;
+	padding: 20px;
+	overflow: hidden;
+}
+
+.page-title {
+	color: #ffffff;
+	margin: 0 0 5px;
+	padding: 20px;
+}
+
+/* .page-subtitle {
+	color: #ffffff;
+	margin-top: 5px;
+} */
+
+.currency-list {
+	padding: 15px;
+}
+
+.currency-list label{
+	font-size: 17px;
+	padding: 10px;
+}
+
+.currency-list select {
+	padding: 2px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.form {
+	padding: 10px;
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	font-size: larger;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	background-color: #ffffff;
+	border: 2px solid #ffffff;
+	display: block;
+	border-radius: 10px;
+	font-size: 14px;
+	width: 100%;
+	padding: 10px;
+}
+
+.form-control i {
+	position: absolute;
+	top: 47px;
+	right: 10px;
+	visibility: hidden;
+}
+
+.form-control small {
+	font-size: 16px;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form button {
+	background-color: rgb(0, 162, 255);
+	border: 2px solid rgb(0, 162, 255);
+	color: rgb(0, 0, 0);
+	font-size: 14px;
+	width: 100%;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.page-logo {
+	width: 200px;
+}
+
+body > img {
+	margin: 0 10px;
+}
+
+img {
+	max-height: 250px;
+}
+
+/* Errors */
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control.error small {
+	color: #b13800;
+	visibility: visible;
+}
