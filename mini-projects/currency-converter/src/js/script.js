@@ -5,8 +5,8 @@ else
 
 const form = document.getElementById('form');
 const valuePage = document.getElementById('value');
-// const fromPage = document.getElementById('my_currency');
-// const toPage = document.getElementById('to_currency');
+const fromPage = document.getElementById('my_currency');
+const toPage = document.getElementById('to_currency');
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -15,16 +15,28 @@ form.addEventListener('submit', (e) => {
 
 function checkInputs() {
 
-	const value = valuePage.value;
-	// const from = fromPage.value;
-	// const to = toPage.value;
+	const money = valuePage.value;
+	const from = fromPage.value;
+	const to = toPage.value;
 
-	if (value == '')
-		setErrorFor(valuePage, 'Informe um valor!');
-	else if (isNaN(value))
-		setErrorFor(valuePage, 'Informe um valor válido!');
+	if (money === '')
+		setErrorFor(valuePage, 'Inform a value.');
+	else if (isNaN(money))
+		setErrorFor(valuePage, 'Inform a valid value.');
+	else if (Number(money) <= 0)
+		setErrorFor(valuePage, 'Inform a positive value.');
 	else
 		setSuccessFor(valuePage, '');
+
+	const formControls = form.querySelectorAll('.form-control');
+
+	// Convert from NodeList to array (to use the every() method)
+	const formIsValid = [...formControls].every(formControl => {
+		return (formControl.className === 'form-control success');
+	});
+
+	if (formIsValid)
+		console.log('all good');
 }
 
 function setErrorFor(input, message) {
