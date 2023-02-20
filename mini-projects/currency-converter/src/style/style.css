@@ -159,7 +159,7 @@ body {
 }
 
 .result button:after {
-	content: "";
+	/* content: ""; */
 	position: relative;
 	width: 10px;
 	height: 10px;
@@ -168,8 +168,8 @@ body {
 	display: none;
 }
 
-.result.active button:before,
-.result.active button:after {
+.copy-text.active button:before,
+.copy-text.active button:after {
 	display: block;
 }
 
