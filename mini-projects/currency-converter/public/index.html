@@ -27,28 +27,30 @@
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png">
+		<img src="./assets/Coins.png">
 		<div class="container">
 			<h1 class="header">
 				Currency Converter
 			</h1>
 
 			<div class="currency-list">
-				<label for="mycurrencies">Your currency:</label>
+				<label for="mycurrencies">Your Currency:</label>
 
 				<select name="MyCurrency" id="my_currency">
 					<option value="brl">BRL (Real)</option>
-					<option value="usd">USD (Dólar Americano)</option>
+					<option value="usd">USD (USA Dollar)</option>
 					<option value="eur">EUR (Euro)</option>
-					<option value="gbp">GBP (Libra Esterlina)</option>
+					<option value="gbp">GBP (Great Britain Pound)</option>
+					<option value="gbp">BTC (BitCoin)</option>
 				</select>
 				<!-- TODO: Review aligning -->
-				<label for="tocurrencies">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspConvert to:</label>
+				<label for="tocurrencies">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspConvert To:</label>
 				
 				<select name="ToCurrency" id="to_currency">
-					<option value="usd">USD (Dólar Americano)</option>
+					<option value="usd">USD (USA Dollar)</option>
 					<option value="eur">EUR (Euro)</option>
-					<option value="gbp">GBP (Libra Esterlina)</option>
+					<option value="gbp">GBP (Great Britain Pound)</option>
+					<option value="gbp">BTC (BitCoin)</option>
 					<option value="brl">BRL (Real)</option>
 				</select> 
 			</div>
@@ -61,11 +63,23 @@
 					<input type="text" id="value" placeholder="Type the value to convert...">
 					<i class="fas fa-exclamation-circle"></i>
 					<i class="fas fa-check-circle"></i>
-					<small>Informe um valor válido!</small>
+					<small>Informe um valor válido.</small>
 				</div>
 
 				<button type="submit">Convert</button>
 			</form>
+		</div>
+
+		<div class="result">
+			<div class="label">
+				Result
+			</div>
+			<div class="copy-text">
+				0.00
+				<button>
+					<i class="fa fa-clone"></i>
+				</button>
+			</div>
 		</div>
 		<script src="../src/js/script.js"></script>
 		<script src="https://kit.fontawesome.com/71a8ecb1b6.js" crossorigin="anonymous"></script>

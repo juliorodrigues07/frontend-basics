@@ -1,33 +1,38 @@
 * {
-  	box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
 }
 
 body {
+	/* TODO: Review aligning */
 	width: 100%;
 	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: block;
+	margin: 0 auto;
+	margin-top: 50px;
+	/* justify-content: center;
+	align-items: center; */
 	text-align: center;
-    /* font-family: "Roboto Mono", monospace; */
-    background-image: url("https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Background.png");
-    background-color: #000000;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    /* height: 100vh; */
+	/* font-family: "Roboto Mono", monospace; */
+	background-image: url("../../public/assets/Background.png");
+	background-color: #000000;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	/* height: 100vh; */
 }
 
 .container {
+	margin: 0 auto;
 	background: linear-gradient(180deg, #94f33b, #126e21 100%);
 	border-radius: 10px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	width: 400px;
+	width: 450px;
 	max-width: 100%;
 	text-align: center;
+	margin-top: 20px;
 	padding: 20px;
 	overflow: hidden;
 }
@@ -36,15 +41,15 @@ body {
 	color: #ffffff;
 	margin: 0 0 5px;
 	padding: 20px;
-}
+	}
 
 /* .page-subtitle {
-	color: #ffffff;
-	margin-top: 5px;
+  color: #ffffff;
+  margin-top: 5px;
 } */
 
 .currency-list {
-	padding: 15px;
+  	padding: 15px;
 }
 
 .currency-list label{
@@ -56,10 +61,11 @@ body {
 	padding: 2px;
 	margin-bottom: 5px;
 	text-align: center;
+	border-radius: 10px;
 }
 
 .form {
-	padding: 10px;
+  	padding: 10px;
 }
 
 .form-control {
@@ -69,8 +75,8 @@ body {
 }
 
 .form-control label {
+	text-align: left;
 	font-size: larger;
-	display: inline-block;
 	margin-bottom: 5px;
 }
 
@@ -86,7 +92,7 @@ body {
 
 .form-control i {
 	position: absolute;
-	top: 47px;
+	top: 43px;
 	right: 10px;
 	visibility: hidden;
 }
@@ -109,26 +115,84 @@ body {
 	padding: 10px;
 }
 
+.form button:active {
+	background: #2a17d6;
+}
+
+.result {
+	margin: 0 auto;
+	background: linear-gradient(90deg, #36d0e4, #151797 100%);
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	width: 350px;
+	max-width: 100%;
+	font-size: large;
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.result button {
+	padding: 10px;
+	background: #000000;
+	color: #ffffff;
+	font-size: 15px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.result button:active {
+	background: green;
+}
+
+.result button:before {
+	content: "Copied!";
+	position: relative;
+	background: green;
+	padding: 4px 8px;
+	border-radius: 20px;
+	font-size: 18px;
+	display: none;
+}
+
+.result button:after {
+	content: "";
+	position: relative;
+	width: 10px;
+	height: 10px;
+	background: green;
+	transform: rotate(45deg);
+	display: none;
+}
+
+.result.active button:before,
+.result.active button:after {
+	display: block;
+}
+
 .page-logo {
-	width: 200px;
+  	width: 200px;
 }
 
 body > img {
-	margin: 0 10px;
+  	margin: 0 10px;
 }
 
 img {
-	max-height: 250px;
+  	max-height: 250px;
 }
 
 /* Errors */
 
 .form-control.success input {
-	border-color: #2ecc71;
+  	border-color: #2ecc71;
 }
 
 .form-control.error input {
-	border-color: #e74c3c;
+  	border-color: #e74c3c;
 }
 
 .form-control.success i.fa-check-circle {
