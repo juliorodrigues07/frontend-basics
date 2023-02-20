@@ -8,7 +8,6 @@ form.addEventListener('submit', (e) => {
 	checkInputs();
 });
 
-// TODO: Copy pop-up not showing up
 const copyText = document.querySelector('.copy-text');
 copyText.querySelector('button').addEventListener('click', function() {
 
@@ -48,17 +47,27 @@ function checkInputs() {
 
 function execConversion(money) {
 
-	let from = fromPage.value;
-	let to = toPage.value;
+	let from = String(fromPage.value);
+	let to = String(toPage.value);
 
 	if (from === to) {
+		
 		let result = parseFloat(money).toLocaleString('pt-br', {style: 'currency', currency: from.toUpperCase()});
 		document.getElementById('inner').innerText = result;
+	} else if (from !== 'btc' && to !== 'btc') {
+		
+		fetch('https://api.exchangerate-api.com/v4/latest/' + from.toUpperCase())
+			.then((response) => response.json())
+			.then((data) => {
+				var exchange = data.rates[to.toUpperCase()];
+				var unformResult = exchange * money;
+
+				let result = parseFloat(unformResult).toLocaleString('pt-br', {style: 'currency', currency: to.toUpperCase()});
+				document.getElementById('inner').innerText = result;
+			});
 	} else {
 		console.log('To be continued...');
 	}
-
-	console.log('https://api.exchangerate-api.com/v4/latest/' + from.toUpperCase());
 }
 
 function setErrorFor(input, message) {
