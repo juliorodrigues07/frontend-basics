@@ -52,11 +52,16 @@ function execConversion(money) {
 
 	if (from === to) {
 		
-		let result = parseFloat(money).toLocaleString('pt-br', {style: 'currency', currency: from.toUpperCase()});
-		document.getElementById('inner').innerText = result;
+		if (from !== 'btc') {
+			let result = parseFloat(money).toLocaleString('pt-br', {style: 'currency', currency: from.toUpperCase()});
+			document.getElementById('inner').innerText = result;
+		} else 
+			document.getElementById('inner').innerText = `₿ ${Number(money).toFixed(2)}`;
+
 	} else if (from !== 'btc' && to !== 'btc') {
 		
 		fetch('https://api.exchangerate-api.com/v4/latest/' + from.toUpperCase())
+			
 			.then((response) => response.json())
 			.then((data) => {
 				var exchange = data.rates[to.toUpperCase()];
@@ -64,9 +69,37 @@ function execConversion(money) {
 
 				let result = parseFloat(unformResult).toLocaleString('pt-br', {style: 'currency', currency: to.toUpperCase()});
 				document.getElementById('inner').innerText = result;
+			})
+			.catch((error) => {
+				console.error(error);
+				alert('Error getting exchange rates!');
 			});
 	} else {
-		console.log('To be continued...');
+		
+		fetch('https://blockchain.info/ticker')
+			
+			.then((response) => response.json())
+			.then((data) => {
+				
+				let result = 0.00;
+				if (from === 'btc') {
+					
+					let exchange = data[to.toUpperCase()]['last'];
+					let unformResult = exchange * money;
+
+					result = parseFloat(unformResult).toLocaleString('pt-br', {style: 'currency', currency: to.toUpperCase()});
+					document.getElementById('inner').innerText = result;
+				} else {
+
+					let exchange = data[from.toUpperCase()]['last'];
+					let unformResult = money / exchange;
+					document.getElementById('inner').innerText = `₿ ${unformResult}`;
+				}
+			})
+			.catch((error) => {
+				console.error(error);
+				alert('Error getting exchange rates!');
+			});
 	}
 }
 
@@ -77,6 +110,8 @@ function setErrorFor(input, message) {
 
 	small.innerText = message;
 	formControl.className = 'form-control error';
+
+	document.getElementById('inner').innerText = '0.00';
 }
 
 function setSuccessFor(input, message) {
