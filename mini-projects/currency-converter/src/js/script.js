@@ -1,8 +1,3 @@
-if (typeof window !== 'undefined') 
-	alert('You are on the browser');
-else 
-	console.log('You are on the server');
-
 const form = document.getElementById('form');
 const valuePage = document.getElementById('value');
 const fromPage = document.getElementById('my_currency');
@@ -13,11 +8,23 @@ form.addEventListener('submit', (e) => {
 	checkInputs();
 });
 
+// TODO: Copy pop-up not showing up
+const copyText = document.querySelector('.copy-text');
+copyText.querySelector('button').addEventListener('click', function() {
+
+	let output = document.getElementById('inner').innerText;
+	navigator.clipboard.writeText(output);
+	copyText.classList.add('active');
+	window.getSelection().removeAllRanges();
+
+	setTimeout(function() {
+		copyText.classList.remove('active');
+	}, 2500);
+});
+
 function checkInputs() {
 
-	const money = valuePage.value;
-	const from = fromPage.value;
-	const to = toPage.value;
+	let money = valuePage.value;
 
 	if (money === '')
 		setErrorFor(valuePage, 'Inform a value.');
@@ -28,15 +35,30 @@ function checkInputs() {
 	else
 		setSuccessFor(valuePage, '');
 
-	const formControls = form.querySelectorAll('.form-control');
+	let formControls = form.querySelectorAll('.form-control');
 
 	// Convert from NodeList to array (to use the every() method)
-	const formIsValid = [...formControls].every(formControl => {
+	let formIsValid = [...formControls].every(formControl => {
 		return (formControl.className === 'form-control success');
 	});
 
 	if (formIsValid)
-		console.log('all good');
+		execConversion(money);
+}
+
+function execConversion(money) {
+
+	let from = fromPage.value;
+	let to = toPage.value;
+
+	if (from === to) {
+		let result = parseFloat(money).toLocaleString('pt-br', {style: 'currency', currency: from.toUpperCase()});
+		document.getElementById('inner').innerText = result;
+	} else {
+		console.log('To be continued...');
+	}
+
+	console.log('https://api.exchangerate-api.com/v4/latest/' + from.toUpperCase());
 }
 
 function setErrorFor(input, message) {
