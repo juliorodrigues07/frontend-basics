@@ -1,99 +1,124 @@
+
 const form = document.getElementById('form');
 const valuePage = document.getElementById('value');
 const fromPage = document.getElementById('my_currency');
 const toPage = document.getElementById('to_currency');
 
+
 form.addEventListener('submit', (e) => {
+
+	// Prevents page reloading
 	e.preventDefault();
 	checkInputs();
 });
 
+
+// Selects results' field and awaits for event (button click)
 const copyText = document.querySelector('.copy-text');
 copyText.querySelector('button').addEventListener('click', function() {
 
-	let output = document.getElementById('inner').innerText;
+	// Copy the result and sets the pop-up to active, showing it
+	const output = document.getElementById('inner').innerText;
 	navigator.clipboard.writeText(output);
 	copyText.classList.add('active');
 	window.getSelection().removeAllRanges();
 
+	// Hides the pop-up after the delay specified
 	setTimeout(function() {
 		copyText.classList.remove('active');
 	}, 2500);
 });
 
+
 function checkInputs() {
 
-	let money = valuePage.value;
+	const amount = valuePage.value;
 
-	if (money === '')
+	// Analyzing form data
+	if (amount === '')
 		setErrorFor(valuePage, 'Inform a value.');
-	else if (isNaN(money))
+	else if (isNaN(amount))
 		setErrorFor(valuePage, 'Inform a valid value.');
-	else if (Number(money) <= 0)
+	else if (Number(amount) <= 0)
 		setErrorFor(valuePage, 'Inform a positive value.');
 	else
 		setSuccessFor(valuePage, '');
 
-	let formControls = form.querySelectorAll('.form-control');
+	const formControls = form.querySelectorAll('.form-control');
 
-	// Convert from NodeList to array (to use the every() method)
-	let formIsValid = [...formControls].every(formControl => {
+	// Convert from NodeList to array (to use the every() method) and check if all the form fields have valid data
+	const formIsValid = [...formControls].every(formControl => {
 		return (formControl.className === 'form-control success');
 	});
 
+	// If the input is valid, execute the conversion
 	if (formIsValid)
-		execConversion(money);
+		execConversion(amount);
 }
 
-function execConversion(money) {
 
-	let from = String(fromPage.value);
-	let to = String(toPage.value);
+function execConversion(amount) {
 
+	const from = String(fromPage.value).toUpperCase();
+	const to = String(toPage.value).toUpperCase();
+
+	// Same currencies
 	if (from === to) {
 		
-		if (from !== 'btc') {
-			let result = parseFloat(money).toLocaleString('pt-br', {style: 'currency', currency: from.toUpperCase()});
+		if (from !== 'BTC') {
+			const result = parseFloat(amount).toLocaleString('pt-br', {style: 'currency', currency: from});
 			document.getElementById('inner').innerText = result;
 		} else 
-			document.getElementById('inner').innerText = `₿ ${Number(money).toFixed(2)}`;
-
-	} else if (from !== 'btc' && to !== 'btc') {
+			document.getElementById('inner').innerText = `₿ ${Number(amount)}`;
+	
+	// Traditional currencies
+	} else if (from !== 'BTC' && to !== 'BTC') {
 		
-		fetch('https://api.exchangerate-api.com/v4/latest/' + from.toUpperCase())
+		// Provides exchange rates for each traditional currency
+		fetch('https://api.exchangerate-api.com/v4/latest/' + from)
 			
 			.then((response) => response.json())
 			.then((data) => {
-				var exchange = data.rates[to.toUpperCase()];
-				var unformResult = exchange * money;
+				
+				// Gets the exchange rate of the destinated currency as a key (similar to python dict)
+				let exchange = data.rates[to];
+				let rawResult = amount * exchange;
 
-				let result = parseFloat(unformResult).toLocaleString('pt-br', {style: 'currency', currency: to.toUpperCase()});
+				// Formats the raw value as currency and writes inside the span block (result div) inner text
+				const result = parseFloat(rawResult).toLocaleString('pt-br', {style: 'currency', currency: to});
 				document.getElementById('inner').innerText = result;
 			})
 			.catch((error) => {
 				console.error(error);
 				alert('Error getting exchange rates!');
 			});
+	
+	// Crypto currencies
 	} else {
 		
+		// Provides only the value of a bitcoin as each traditional currency
 		fetch('https://blockchain.info/ticker')
 			
 			.then((response) => response.json())
 			.then((data) => {
 				
-				let result = 0.00;
-				if (from === 'btc') {
+				if (from === 'BTC') {
 					
-					let exchange = data[to.toUpperCase()]['last'];
-					let unformResult = exchange * money;
+					// Gets exchange rate from currency TO convert
+					let exchange = data[to]['last'];
+					let rawResult = amount * exchange;
 
-					result = parseFloat(unformResult).toLocaleString('pt-br', {style: 'currency', currency: to.toUpperCase()});
+					const result = parseFloat(rawResult).toLocaleString('pt-br', {style: 'currency', currency: to});
 					document.getElementById('inner').innerText = result;
+
 				} else {
 
-					let exchange = data[from.toUpperCase()]['last'];
-					let unformResult = money / exchange;
-					document.getElementById('inner').innerText = `₿ ${unformResult}`;
+					// Gets exchange rate from original currency
+					let exchange = data[from]['last'];
+					const result = amount / exchange;
+
+					// Writes raw string in the result field (formatter doesn't support cryptocurrency)
+					document.getElementById('inner').innerText = `₿ ${result}`;
 				}
 			})
 			.catch((error) => {
@@ -103,22 +128,33 @@ function execConversion(money) {
 	}
 }
 
+
 function setErrorFor(input, message) {
 
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
+	// Gets immediate parent (div) to select small inner tag
+	let formControl = input.parentElement;
+	let small = formControl.querySelector('small');
 
+	// Sets error on the form field, to display an error icon and message to the user
 	small.innerText = message;
 	formControl.className = 'form-control error';
 
+	// If the form has invalid data, resets the result to default (0.00)
 	document.getElementById('inner').innerText = '0.00';
 }
 
+
 function setSuccessFor(input, message) {
 
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
+	let formControl = input.parentElement;
+	let small = formControl.querySelector('small');
 
+	// Displays a check icon, informing the user that the field input data is valid
 	small.innerText = message;
 	formControl.className = 'form-control success';
+
+	// Removes the check icon after the delay specified
+	setTimeout(function() {
+		formControl.className = 'form-control';
+	}, 2500);
 }
