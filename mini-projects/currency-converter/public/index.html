@@ -1,30 +1,15 @@
-<!-- <!DOCTYPE html>
-<div class="container">
-  <h1 class="page-title">
-    Currency Converter
-  </h1>
-  <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
-  <link rel="stylesheet" href="../src/style/style.css" >
-  <script type="module" src="../src/js/test.js"></script> 
-</div> 
-<a href="https://alura.com.br/" target="_blank">
-  <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-  <img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png">
-</a> -->
-
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Currency Converter</title>
-		<!-- <meta name="description" content=""> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../public/assets/PageIcon.png">
 		<link rel="stylesheet" href="../src/style/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+		<title>Currency Converter</title>
 	</head>
 	<body>
 		<img src="./assets/Coins.png">
@@ -32,7 +17,8 @@
 			<h1 class="header">
 				Currency Converter
 			</h1>
-
+			
+			<!-- Dropdown lists to select currencies -->
 			<div class="currency-list">
 				<label for="mycurrencies">Your Currency:</label>
 
@@ -55,21 +41,23 @@
 				</select> 
 			</div>
 
+			<!-- Input field to inform the amount to convert -->
 			<form id="form" class="form">
 				
 				<div class="form-control">
 					
 					<label for="value">Value</label>
-					<input type="text" id="value" placeholder="Type the value to convert...">
+					<input type="text" id="value" placeholder="Type the value to convert... (e.g., 12.34)">
 					<i class="fas fa-exclamation-circle"></i>
 					<i class="fas fa-check-circle"></i>
-					<small>Informe um valor válido.</small>
+					<small>Inform a valid value.</small>
 				</div>
 
 				<button type="submit">Convert</button>
 			</form>
 		</div>
 
+		<!-- Conversion result area -->
 		<div class="result">
 			<div class="label">
 				Result
@@ -81,6 +69,8 @@
 				</button>
 			</div>
 		</div>
+
+		<!-- JS source script and fontawesome for displaying icons -->
 		<script src="../src/js/script.js"></script>
 		<script src="https://kit.fontawesome.com/71a8ecb1b6.js" crossorigin="anonymous"></script>
 	</body>
