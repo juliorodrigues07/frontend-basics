@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="icon" href="../public/assets/"> -->
+        <link rel="icon" href="../public/assets/planet-icon-png-12.png">
 		<link rel="stylesheet" href="../src/style/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,39 @@
         <title>Interstellar Converter</title>
     </head>
     <body>
+        <!-- <video autoplay muted loop id="myVideo">
+            <source src="./assets/Stars - 43027.mp4" type="video/mp4">
+        </video> -->
+        
+        <div class="container">
+            <h1 class="header">
+                Interstellar Converter
+            </h1>
+
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="ly">Light Years</label>
+                    <input type="text" id="ly" placeholder="Type the value to convert...">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Inform a valid value.</small>
+                </div>
+
+                <button type="submit">Convert</button>
+            </form>
+        </div>
+
+        <div class="result">
+            <label for="inner">Result</label>
+            <div class="copy-text">
+                <span id="inner">0.00</span>
+                <button>
+                    <i class="fa fa-clone"></i>
+                </button>
+            </div>
+        </div>
+
         <script src="../src/js/script.js"></script>
+        <script src="https://kit.fontawesome.com/71a8ecb1b6.js" crossorigin="anonymous"></script>
     </body>
 </html>
