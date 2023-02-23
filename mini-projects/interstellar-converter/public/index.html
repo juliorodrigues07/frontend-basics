@@ -13,18 +13,30 @@
         <title>Interstellar Converter</title>
     </head>
     <body>
-        <!-- <video autoplay muted loop id="myVideo">
-            <source src="./assets/Stars - 43027.mp4" type="video/mp4">
-        </video> -->
         
         <div class="container">
             <h1 class="header">
                 Interstellar Converter
             </h1>
 
+            <div class="metric-list">
+
+                <label for="my-metrics">Your Metric:</label>
+                <select name="MyMetric" id="my-metric">
+					<option value="ly">LY (Light-year)</option>
+					<option value="au">AU (Astronomical unit)</option>
+				</select>
+				
+				<label for="to-metrics">Convert To:</label>
+				<select name="ToMetric" id="to-metric">
+					<option value="au">AU (Astronomical unit)</option>
+					<option value="ly">LY (Light-year)</option>
+				</select> 
+            </div>
+
             <form id="form" class="form">
                 <div class="form-control">
-                    <label for="ly">Light Years</label>
+                    <label for="value">Value</label>
                     <input type="text" id="ly" placeholder="Type the value to convert...">
                     <i class="fas fa-exclamation-circle"></i>
                     <i class="fas fa-check-circle"></i>
