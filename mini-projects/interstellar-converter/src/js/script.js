@@ -1,3 +1,8 @@
+/* eslint-disable no-undef */
+math.createUnit('ly', '9460730777119.56 km');
+math.createUnit('pc', '30856775714409.19 km');
+math.createUnit('AU', '149597870.7 km');
+
 const form = document.getElementById('form');
 const valueInput = document.getElementById('value');
 const fromInput = document.getElementById('my-metric');
@@ -37,14 +42,29 @@ function checkInputs() {
 	else
 		setSuccessFor(valueInput);
 
-	const formControls = form.querySelector('.form-control');
+	const formControls = form.querySelectorAll('.form-control');
 
 	const formIsValid = [...formControls].every(formControl => {
 		return (formControl.className == 'form-control success');
 	});
 
 	if (formIsValid)
-		console.log('soon...');
+		execConversion(amount);
+}
+
+
+function execConversion(amount) {
+
+	const origin = String(fromInput.value);
+	const destiny = String(toInput.value);
+
+	if (origin === destiny) {
+		document.getElementById('inner').innerText = `${amount} ${origin}`;
+	} else {
+		const from = math.unit(amount, origin);
+		result = from.to(destiny);
+		document.getElementById('inner').innerText = `${result.toNumber()} ${destiny}`;
+	}
 }
 
 
