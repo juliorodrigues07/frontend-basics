@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../public/assets/brain.svg">
+        <link rel="stylesheet" href="../src/style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+        <title>Mentalist</title>
+    </head>
+    <body>
+        <h1 class="header">
+            Mentalist
+        </h1>
+        
+        <div class="header-image">
+            <img src="./assets/Brain.png">
+        </div>
+
+        <div class="start-game">
+            <button>
+                Start<i class="fa-solid fa-play"></i>
+            </button>
+        </div>
+
+        <div class="container">
+            
+            <h2 class="info">
+                Choose an interval to generate a random number and start guessing!
+            </h2>
+
+            <form id="interval-form" class="interval-form">
+
+                <div class="form-control">
+                    <label for="from-value">From</label>
+                    <input type="text" id="from" placeholder="Type the initial value...">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Inform a valid value.</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="to-value">To</label>
+                    <input type="text" id="to" placeholder="Type the final value...">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Inform a valid value.</small>
+                </div>
+
+                <button type="submit">Begin</button>
+            </form>
+        </div>
+
+        <div class="try">
+            <form id="input-form" class="input-form">
+
+                <div class="input-control">
+                    <label for="input-value">Value</label>
+                    <input type="text" id="input" placeholder="Type a value...">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Inform a valid value.</small>
+                </div>
+
+                <button type="submit">Try</button>
+            </form>
+
+            <label for="inner">Attempts</label>
+            <div class="copy-text">
+                <span id="inner">0</span>
+            </div>
+        </div>
+
+        <!-- <script src="../src/js/script.js"></script>
+        <script src="https://kit.fontawesome.com/71a8ecb1b6.js" crossorigin="anonymous"></script> -->
+    </body>
+</html>
