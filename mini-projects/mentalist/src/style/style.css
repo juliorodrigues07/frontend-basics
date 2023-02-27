@@ -23,17 +23,17 @@ body {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     text-align: center;
     margin: 40px auto;
-    width: 30%;
+    width: 400px;
     border-radius: 10px;
 }
 
 .header-image {
+    margin-top: -50px;
     text-align: center;
 }
 
 .start-game {
     text-align: center;
-    /* display: none; */
 }
 
 .start-game button {
@@ -42,10 +42,17 @@ body {
 	border: 2px solid #68179e;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	font-size: 16px;
-	width: 10%;
+	width: 100px;
 	border-radius: 10px;
 	padding: 10px;
 	cursor: pointer;
+    /* display: none; */
+}
+
+.start-game i {
+    position: relative;
+    left: 10px;
+    top: 1px;
 }
 
 .start-game button:active {
@@ -53,9 +60,112 @@ body {
 }
 
 .container {
-    visibility: hidden;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #3bd7f3, #68179e 100%);
+    width: 550px;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+    opacity: 0;
+    /* visibility: hidden; */
+}
+
+.container h2 {
+    padding: 5px;
+    text-align: center;
+}
+
+.interval-form {
+    padding: 10px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control label {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.form-control input {
+    background-color: #ffffff;
+	border: 2px solid #ffffff;
+	border-radius: 10px;
+	font-size: 15px;
+	width: 100%;
+	padding: 10px;
+}
+
+.form-control i {
+    position: absolute;
+    top: 43px;
+    right: 10px;
+    visibility: visible;
+}
+
+.interval-form small {
+    font-size: 16px;
+    position: relative;
+    margin-top: 7px;
+}
+
+.submit-interval {
+    text-align: center;
+}
+
+.submit-interval button {
+    background-color: #3b66f3;
+	border: 2px solid #3b8bf3;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	font-size: 16px;
+	width: 100px;
+	border-radius: 10px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.submit-interval button:active {
+    background: #20d32f;
 }
 
 .try {
     visibility: hidden;
+}
+
+.start-game.success button {
+    display: none;
+}
+
+.form-control.success input {
+	border-color: #73ff00;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #73ff00;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control.error small {
+    color: #ff0000;
+    visibility: visible;
+}
+
+.container.success {
+    opacity: 1;
+}
+
+.container.remove {
+    display: none;
 }
