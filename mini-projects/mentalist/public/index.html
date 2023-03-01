@@ -29,7 +29,7 @@
         <div class="container">
             
             <h2 class="info">
-                Choose an interval to generate a random number and start guessing!
+                Choose an interval to generate a random number
             </h2>
 
             <form id="interval-form" class="interval-form">
@@ -57,22 +57,34 @@
         </div>
 
         <div class="try">
+
+            <h2 class="info">
+                Guess the number!
+            </h2>
+
             <form id="input-form" class="input-form">
 
-                <div class="input-control">
+                <div class="form-control">
                     <label for="input-value">Value</label>
                     <input type="text" id="input" placeholder="Type a value...">
                     <i class="fas fa-exclamation-circle"></i>
                     <i class="fas fa-check-circle"></i>
                     <small>Inform a valid value.</small>
                 </div>
-
-                <button type="submit">Try</button>
+                
+                <div class="guess-submit">
+                    <button type="submit">Try</button>
+                </div>
             </form>
-
-            <label for="inner">Attempts</label>
-            <div class="copy-text">
+            
+            <div class="guesses">
+                <label for="inner">Attempts:</label>
                 <span id="inner">0</span>
+            </div>
+
+            <div class="history">
+                <label for="my-history">History</label>
+                <span id="logs"></span>
             </div>
         </div>
 

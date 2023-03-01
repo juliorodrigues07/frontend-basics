@@ -46,7 +46,6 @@ body {
 	border-radius: 10px;
 	padding: 10px;
 	cursor: pointer;
-    /* display: none; */
 }
 
 .start-game i {
@@ -62,12 +61,11 @@ body {
 .container {
     margin: 0 auto;
     background: linear-gradient(180deg, #3bd7f3, #68179e 100%);
-    width: 550px;
+    width: 470px;
     border-radius: 10px;
     padding: 20px;
     overflow: hidden;
-    opacity: 0;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .container h2 {
@@ -103,13 +101,14 @@ body {
     position: absolute;
     top: 43px;
     right: 10px;
-    visibility: visible;
+    visibility: hidden;
 }
 
-.interval-form small {
+.form-control small {
     font-size: 16px;
     position: relative;
     margin-top: 7px;
+    visibility: hidden;
 }
 
 .submit-interval {
@@ -132,11 +131,60 @@ body {
 }
 
 .try {
+    margin: 0 auto;
+    background: linear-gradient(180deg, #3bd7f3, #68179e 100%);
+    width: 470px;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
     visibility: hidden;
 }
 
-.start-game.success button {
-    display: none;
+.try h2 {
+    text-align: center;
+}
+
+.input-form {
+    padding: 10px;
+}
+
+.guess-submit {
+    text-align: center;
+}
+
+.guess-submit button {
+    background-color: #3b66f3;
+	border: 2px solid #3b8bf3;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	font-size: 16px;
+	width: 100px;
+	border-radius: 10px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.guess-submit button:active {
+    background: #20d32f;
+}
+
+.guesses {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.history {
+    margin: 0 auto;
+    background-color: rgb(187, 13, 13);
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 15px;
+    width: 350px;
+    text-align: center;
+}
+
+.history span {
+    font-size: 16px;
 }
 
 .form-control.success input {
@@ -162,10 +210,18 @@ body {
     visibility: visible;
 }
 
-.container.success {
-    opacity: 1;
+.start-game.success button {
+    display: none;
+}
+
+.container.add {
+    visibility: visible;
 }
 
 .container.remove {
     display: none;
+}
+
+.try.add {
+    visibility: visible;
 }
