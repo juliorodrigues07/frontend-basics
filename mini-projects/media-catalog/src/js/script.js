@@ -1,17 +1,19 @@
 const form = document.getElementById('form-wrapper');
-const mediaList = document.getElementById('media-list');
+const mediaList = document.getElementById('centering-tweak');
 let media = Array();
 
 form.querySelector('button').addEventListener('click', (e) => {
 	e.preventDefault();
 });
 
+// eslint-disable-next-line no-unused-vars
 function checkInputs() {
 
 	let image = document.getElementById('media');
 	let title = document.getElementById('media-title');
 	let trailerURL = document.getElementById('trailer');
 
+	// Validates if the image has picture format extension
 	let check = String(image.value).toLowerCase().endsWith('.jpg') || 
 				String(image.value).toLowerCase().endsWith('.png');
 
@@ -53,9 +55,10 @@ function addMedia(image, title, trailerURL) {
 	// Clears the form input fields
 	document.getElementById('form-wrapper').reset();
 
+	// Adds the media information in the HTML page source file
 	mediaList.innerHTML += `<a href=${trailerURL}>\n\t
 								<img src=${image}>\n\t
-								<span>${title}</span>\n
+								<figcaption>${title}</figcaption>\n
 							</a>`;
 }
 
