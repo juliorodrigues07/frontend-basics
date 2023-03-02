@@ -164,4 +164,8 @@ function setSuccessFor(field) {
 
 	let formControl = field.parentElement;
 	formControl.className = 'form-control success';
+
+	setTimeout(function() {
+		formControl.className = 'form-control';
+	}, 2500);
 }
