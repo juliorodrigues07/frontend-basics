@@ -13,6 +13,61 @@
     </head>
     <body>
         
+        <div class="container">
+            <h1 class="page-title">
+                Media Catalog 
+            </h1>
+
+            <p class="page-subtitle">
+                What are your favorite movies and (or) series?
+            </p>
+
+            <form class="form-wrapper" id="form-wrapper">
+
+                <div class="form-control">
+                    <input type="text" id="media" name="media" placeholder="Inform the media image URL...">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Inform a valid value.</small>
+                </div>
+
+                <div class="form-control">
+                    <input type="text" id="media-title" name="media-title" placeholder="Inform the media title...">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Inform a valid value.</small>
+                </div>
+
+                <div class="form-control">
+                    <input type="text" id="trailer" name="trailer" placeholder="Inform the media trailer URL...">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Inform a valid value.</small>
+                </div>
+                
+                <button onClick="checkInputs()">Add</button>
+            </form>
+        </div>
+
+        <div id="media-list">
+            <a href="https://www.youtube.com/watch?v=N6HGuJC--rk">
+                <img src="https://m.media-amazon.com/images/M/MV5BM2QyNDIzOGMtNThhNS00NmUwLWI0ZjUtZjdkN2I1OTRjZWQ3XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_.jpg">
+                <span>Mr. Robot</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E">
+                <img src="https://m.media-amazon.com/images/I/A1JVqNMI7UL._AC_SL1500_.jpg">
+                <span>Interstellar</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=RLtaA9fFNXU">     
+                <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Prestige_poster.jpg">
+                <span>The Prestige</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=oZn3qSgmLqI">
+                <img src="https://m.media-amazon.com/images/M/MV5BM2EwMmRhMmUtMzBmMS00ZDQ3LTg4OGEtNjlkODk3ZTMxMmJlXkEyXkFqcGdeQXVyMjM5ODk1NDU@._V1_.jpg">
+                <span>Queen's Gambit</span>
+            </a>
+        </div>
+
         <script src="../src/js/script.js"></script>
         <script src="https://kit.fontawesome.com/71a8ecb1b6.js" crossorigin="anonymous"></script>
     </body>

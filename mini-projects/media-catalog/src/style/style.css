@@ -7,9 +7,123 @@
 
 body {
     min-height: 100vh;
-    background: url('../../public/assets/blue-background.png') no-repeat center center fixed;
+    background: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-04-aluraflix-e-filmes.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    width: 430px;
+}
+
+.page-title {
+    text-align: center;
+    color: #ffffff;
+    margin: 0 0 5px;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-wrapper {
+    text-align: center;
+    padding: 10px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control label {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.form-control input {
+    background-color: #ffffff;
+	border: 2px solid #ffffff;
+	border-radius: 10px;
+	font-size: 15px;
+	width: 100%;
+	padding: 10px;
+    margin-bottom: 5px;
+}
+
+.form-control i {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    font-size: 16px;
+    position: relative;
+    margin-top: 8px;
+    visibility: hidden;
+}
+
+.form-wrapper button {
+    border: 0;
+    color: #ffffff;
+    background: #da1e26;
+    font-weight: bold;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-wrapper button:hover {
+    opacity: 0.7;
+}
+
+#media-list img {
+    margin: 10px;
+    max-height: 250px;
+    cursor: pointer;
+}
+
+#media-list img:hover {
+    opacity: 0.7;
+}
+
+#media-list span {
+    position: relative;
+    color: #ffffff;
+}
+
+.form-control.success input {
+	border-color: #73ff00;
+}
+
+.form-control.error input {
+	border-color: #da1e26;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #73ff00;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #da1e26;
+    visibility: visible;
+}
+
+.form-control.error small {
+    color: #ff0000;
+    visibility: visible;
 }
