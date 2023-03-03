@@ -125,8 +125,10 @@ function checkGuessInput() {
 		return (formControl.className == 'form-control success');
 	});
 
-	if (formIsValid) 
+	if (formIsValid) {
+		document.getElementById('input-form').reset();
 		validateAttempt(attempt);
+	}
 }
 
 function validateAttempt(attempt) {
@@ -138,7 +140,7 @@ function validateAttempt(attempt) {
 	
 	// Show some hints accordingly to the values passed
 	if (yourTry == randomNumber) 
-		document.getElementById('logs').innerText = '\nYOU FOUND IT!!!' + history;
+		document.getElementById('logs').innerText = '\nYOU FOUND IT! 😀' + history;
 	else if (yourTry < randomNumber) {
 		message = `\nThe number is greater than ${yourTry}`;
 		document.getElementById('logs').innerText = message + history;
