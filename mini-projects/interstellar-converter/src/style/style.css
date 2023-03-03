@@ -166,16 +166,16 @@ body {
 }
 
 .form-control.success i.fa-check-circle {
-  color: #73ff00;
-  visibility: visible;
+	color: #73ff00;
+	visibility: visible;
 }
 
 .form-control.error i.fa-exclamation-circle {
-  color: #e74c3c;
-  visibility: visible;
+	color: #e74c3c;
+	visibility: visible;
 }
 
 .form-control.error small {
-  color: #ff0000;
-  visibility: visible;
+	color: #ff0000;
+	visibility: visible;
 }
