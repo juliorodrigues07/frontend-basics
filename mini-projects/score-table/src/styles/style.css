@@ -6,10 +6,166 @@
 }
 
 body {
-    min-height: 100vh;
-    /* background: url('') no-repeat center center fixed; */
+    min-height: 400vh;
+    background: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/tabela-classificacao-bg.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: #111;
+}
+
+table {
+    border: 2px solid white;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight:900;
+    text-align: center;
+    color: #ffffff;
+    border: 2px solid #68179e;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #182fb1, #68179e 100%);
+    margin: 40px auto;
+    width: 300px;
+    padding: 10px;
+}
+
+th,
+tr,
+td {
+    text-align: center;
+    border: solid 1px white;
+    color: white;
+    padding: 5px;
+}
+
+.win {
+    width: 80px;
+    padding: 2px;
+    border: 2px solid #018d08;
+    background: #018d08;
+    color: #f6f6f6;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tie {
+    width: 80px;
+    padding: 2px;
+    border: 2px solid #616159;
+    background: #616159;
+    color: #f6f6f6;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.loss {
+    width: 80px;
+    padding: 2px;
+    border: 2px solid #cf0000;
+    background: #cf0000;
+    color: #f6f6f6;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.container {
+    margin: 40px auto;
+    background: linear-gradient(0deg, #182fb1, #68179e 100%);
+    color: #ffffff;
+    width: 470px;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.container h2 {
+    padding: 5px;
+    text-align: center;
+}
+
+.name-form {
+    padding: 10px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control label {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.form-control input {
+    background-color: #ffffff;
+	border: 3px solid;
+	border-radius: 10px;
+	font-size: 15px;
+	width: 100%;
+	padding: 10px;
+    margin-bottom: 3px;
+}
+
+.form-control i {
+    position: absolute;
+    top: 44px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    font-size: 16px;
+    position: relative;
+    margin-top: 7px;
+    visibility: hidden;
+}
+
+.submit-name {
+    text-align: center;
+}
+
+.submit-name button {
+    background: #3b8bf3;
+	border: 2px solid #68179e;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	font-size: 16px;
+	width: 100px;
+	border-radius: 10px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.form-control.success input {
+	border-color: #73ff00;
+}
+
+.form-control.error input {
+	border-color: #ff0000;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #73ff00;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #ff0000;
+    visibility: visible;
+}
+
+.form-control.error small {
+    color: #ff0000;
+    visibility: visible;
 }

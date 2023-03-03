@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="icon" href="../public/assets/"> -->
+        <link rel="icon" href="../public/assets/Controller.png">
         <link rel="stylesheet" href="../src/styles/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,49 @@
         <title>Score Table</title>
     </head>
     <body>
-        
-        <script src="../src/js/script.js"></script>
+        <h1>Score Board</h1>
+
+        <table style="width:95%">
+            
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Wins</th>
+                <th>Ties</th>
+                <th>Defeats</th>
+                <th>Points</th>
+                <th colspan="3">Actions</th>
+            </tr>
+            </thead>
+
+            <tbody id="player-table">
+            </tbody>
+        </table>
+
+        <div class="container">
+            
+            <h2 class="info">
+                Add a player
+            </h2>
+
+            <form id="name-form" class="name-form">
+
+                <div class="form-control">
+                    <label for="name-value">Name</label>
+                    <input type="text" id="name" placeholder="Type the player name...">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Inform a name.</small>
+                </div>
+                
+                <div class="submit-name">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+
+        <script src="../src/js/addPlayer.js"></script>
+        <script src="../src/js/updateTable.js"></script>
         <script src="https://kit.fontawesome.com/71a8ecb1b6.js" crossorigin="anonymous"></script>
     </body>
 </html>
