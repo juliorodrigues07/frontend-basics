@@ -15,7 +15,7 @@ function checkInputs() {
 
 	// Validates if the image has picture format extension
 	let check = String(image.value).toLowerCase().endsWith('.jpg') || 
-				String(image.value).toLowerCase().endsWith('.png');
+			String(image.value).toLowerCase().endsWith('.png');
 
 	if (check)
 		setSuccessFor(image);
@@ -47,19 +47,21 @@ function checkInputs() {
 function addMedia(image, title, trailerURL) {
 
 	let mediaDict = {};
-	mediaDict['Image'] = image;
-	mediaDict['Title'] = title;
-	mediaDict['Trailer'] = trailerURL;
+	mediaDict.Image = image;
+	mediaDict.Title = title;
+	mediaDict.Trailer = trailerURL;
 	media.push(mediaDict);
 
 	// Clears the form input fields
 	document.getElementById('form-wrapper').reset();
 
 	// Adds the media information in the HTML page source file
-	mediaList.innerHTML += `<a href=${trailerURL}>\n\t
-								<img src=${image}>\n\t
-								<figcaption>${title}</figcaption>\n
-							</a>`;
+	mediaList.innerHTML += `
+	<a href=${trailerURL}>
+		<img src=${image}>
+		<figcaption>${title}</figcaption>
+	</a>
+	`;
 }
 
 function setErrorFor(field, message) {
