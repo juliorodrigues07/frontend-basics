@@ -56,6 +56,19 @@ function checkInputs() {
 		execConversion(amount);
 }
 
+async function fetchCurrencies(currency) {
+
+	const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${currency}`);
+	const data = await response.json();
+	return data;
+}
+
+async function fetchCrypto() {
+	
+	const response = await fetch('https://blockchain.info/ticker');
+	const data = await response.json();
+	return data;
+}
 
 function execConversion(amount) {
 
@@ -75,9 +88,7 @@ function execConversion(amount) {
 	} else if (from !== 'BTC' && to !== 'BTC') {
 		
 		// Provides exchange rates for each traditional currency
-		fetch('https://api.exchangerate-api.com/v4/latest/' + from)
-			
-			.then((response) => response.json())
+		fetchCurrencies(from)
 			.then((data) => {
 				
 				// Gets the exchange rate of the destinated currency as a key (similar to python dict)
@@ -97,9 +108,7 @@ function execConversion(amount) {
 	} else {
 		
 		// Provides only the value of a bitcoin as each traditional currency
-		fetch('https://blockchain.info/ticker')
-			
-			.then((response) => response.json())
+		fetchCrypto()
 			.then((data) => {
 				
 				if (from === 'BTC') {
