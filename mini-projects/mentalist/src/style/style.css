@@ -21,7 +21,7 @@ body {
     font-weight:900;
     color: #ffffff;
     background: #68179e;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     text-align: center;
     margin: 40px auto;
     width: 400px;
@@ -36,13 +36,13 @@ body {
 .restart-game button {
     color: #ffffff;
     background-color: #68179e;
-	border: 2px solid #68179e;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	font-size: 16px;
-	width: 120px;
-	border-radius: 10px;
-	padding: 10px;
-	cursor: pointer;
+    border: 2px solid #68179e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    width: 120px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .restart-game i {
@@ -52,7 +52,7 @@ body {
 }
 
 .restart-game button:active {
-	background: #173ad6;
+    background: #173ad6;
 }
 
 .header-image {
@@ -67,13 +67,13 @@ body {
 .start-game button {
     color: #ffffff;
     background-color: #68179e;
-	border: 2px solid #68179e;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	font-size: 16px;
-	width: 100px;
-	border-radius: 10px;
-	padding: 10px;
-	cursor: pointer;
+    border: 2px solid #68179e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .start-game i {
@@ -83,7 +83,7 @@ body {
 }
 
 .start-game button:active {
-	background: #173ad6;
+    background: #173ad6;
 }
 
 /* Random number interval definition */
@@ -119,11 +119,11 @@ body {
 
 .form-control input {
     background-color: #ffffff;
-	border: 2px solid #ffffff;
-	border-radius: 10px;
-	font-size: 15px;
-	width: 100%;
-	padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
 }
 
 .form-control i {
@@ -146,13 +146,13 @@ body {
 
 .submit-interval button {
     background-color: #3b66f3;
-	border: 2px solid #3b8bf3;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	font-size: 16px;
-	width: 100px;
-	border-radius: 10px;
-	padding: 10px;
-	cursor: pointer;
+    border: 2px solid #3b8bf3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .submit-interval button:active {
@@ -184,13 +184,13 @@ body {
 
 .guess-submit button {
     background-color: #3b66f3;
-	border: 2px solid #3b8bf3;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	font-size: 16px;
-	width: 100px;
-	border-radius: 10px;
-	padding: 10px;
-	cursor: pointer;
+    border: 2px solid #3b8bf3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .guess-submit button:active {
@@ -220,11 +220,11 @@ body {
 
 /* Error messages and styling on inputs */
 .form-control.success input {
-	border-color: #73ff00;
+    border-color: #73ff00;
 }
 
 .form-control.error input {
-	border-color: #e74c3c;
+    border-color: #e74c3c;
 }
 
 .form-control.success i.fa-check-circle {
