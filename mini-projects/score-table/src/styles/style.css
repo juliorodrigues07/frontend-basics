@@ -44,34 +44,37 @@ td {
     padding: 5px;
 }
 
-.win {
+tbody button {
     width: 80px;
     padding: 2px;
-    border: 2px solid #018d08;
-    background: #018d08;
     color: #f6f6f6;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.win {
+    border: 2px solid #018d08;
+    background: #018d08;
 }
 
 .tie {
-    width: 80px;
-    padding: 2px;
     border: 2px solid #616159;
     background: #616159;
-    color: #f6f6f6;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 .loss {
-    width: 80px;
-    padding: 2px;
     border: 2px solid #cf0000;
     background: #cf0000;
-    color: #f6f6f6;
-    border-radius: 4px;
-    cursor: pointer;
+}
+
+.clear {
+    border: 2px solid #182fb1;
+    background: #182fb1;
+}
+
+.remove {
+    border: 2px solid #000000;
+    background: #000000;
 }
 
 button:hover {

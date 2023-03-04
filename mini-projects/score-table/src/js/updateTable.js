@@ -41,6 +41,20 @@ function addDefeat() {
 	updateStats();
 }
 
+function clearData() {
+
+	fetchData();
+	playerData.Wins = 0;
+	playerData.Ties = 0;
+	playerData.Defeats = 0;
+	playerData.Points = 0;
+	updateStats()
+}
+
+function removePlayer() {
+	document.activeElement.parentElement.parentElement.outerHTML = '';
+}
+
 function updateStats() {
 
 	document.activeElement.parentElement.parentElement.innerHTML = `
@@ -52,5 +66,11 @@ function updateStats() {
 		<td><button class="win" onclick="addWin()">Win</button></td>
 		<td><button class="tie" onclick="addTie()">Tie</button></td>
 		<td><button class="loss" onclick="addDefeat()">Defeat</button></td>
+		<td><button class="clear" onclick="clearData()">
+			Reset <i class="fa-solid fa-rotate-right"></i>
+		</button></td>
+		<td><button class="remove" onclick="removePlayer()">
+			Remove <i class="fa-solid fa-trash"></i>
+		</button></td>
 	`;
 }

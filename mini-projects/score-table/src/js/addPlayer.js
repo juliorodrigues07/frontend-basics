@@ -49,6 +49,12 @@ function addPlayerRow(playerName) {
 			<td><button class="win" onClick="addWin()">Win</button></td>
 			<td><button class="tie" onClick="addTie()">Tie</button></td>
 			<td><button class="loss" onClick="addDefeat()">Defeat</button></td>
+			<td><button class="clear" onclick="clearData()">
+				Reset <i class="fa-solid fa-rotate-right"></i>
+			</button></td>
+			<td><button class="remove" onclick="removePlayer()">
+				Remove <i class="fa-solid fa-trash"></i>
+			</button></td>
 		</tr>
 	`;
 }
