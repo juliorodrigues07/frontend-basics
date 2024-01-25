@@ -8,7 +8,9 @@
     <title>Spotify</title>
     
     <link rel="stylesheet" href="../src/style/reset.css">
+    <link rel="stylesheet" href="../src/style/vars.css">
     <link rel="stylesheet" href="../src/style/sidebar.css">
+    <link rel="stylesheet" href="../src/style/header_bar.css">
     <link rel="stylesheet" href="../src/style/footer.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
@@ -103,6 +105,29 @@
     
         </div>
     </div>
+
+    <main>
+        <div class="header">
+            <nav class="header_navigation">
+                <div class="navigation">
+                    <button class="arrow-left">
+                        <img src="./assets/icons/small-left.png" alt="Seta para esquerda">
+                    </button>
+                    <button class="arrow-right">
+                        <img src="./assets/icons/small-right.png" alt="Seta para direita">
+                    </button>
+                </div>
+                <div class="header_search">
+                    <img src="./assets/icons/search.png" alt="">
+                    <input id="search-input" type="text" maxlength="50" placeholder="What do you want to listen to?">
+                </div>
+                <div class="header_login">
+                    <button class="signup">Sign up</button>
+                    <button class="login">Log In</button>
+                </div>
+            </nav>
+        </div>
+    </main>
 
     <footer class="disclaimer">
         <div class="text">
