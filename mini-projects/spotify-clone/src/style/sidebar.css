@@ -6,6 +6,7 @@ body
 
 .sidebar
 {
+    top: 0;
     padding: 12px;
     position: fixed;
     width: 400px;
@@ -13,14 +14,14 @@ body
 
 .sidebar_navigation
 {
-    background: #121212;
+    background: var(--bg-elements-color);
     border-radius: 8px;
     padding: 16px 0 0 16px;
 }
 
 .logo
 {
-    background: #121212;
+    background: var(--bg-elements-color);
     border-radius: 8px;
     padding: 16px 0 0 16px;
 }
@@ -43,7 +44,7 @@ body
 
 .sidebar nav ul li a
 {
-    color: #b3b3b3;
+    color: #ffffff;
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
@@ -62,8 +63,8 @@ body
 
 .library
 {
-    /* height: 68vh; */
-    background-color: #121212;
+    height: 67.5vh;
+    background-color: var(--bg-elements-color);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -83,7 +84,7 @@ body
 
 .library .library_content .library_button
 {
-    color: #b3b3b3;
+    color: #ffffff;
     background-color: transparent;
     border: 0px;
     font-size: 14px;
@@ -92,7 +93,7 @@ body
 
 .library .library_content .add_button
 {
-    color: #b3b3b3;
+    color: #ffffff;
     background-color: transparent;
     border: 0px;
 }
@@ -184,7 +185,7 @@ body
 {
     padding: 10px;
     display:inline-block;
-    color: #b3b3b3;
+    color: #ffffff;
     font-family: "DM Sans", sans-serif;
     font-weight: 500;
     font-size: 10px;
@@ -210,6 +211,5 @@ body
 
 .library .languages .languages_button:hover
 {
-    transition: 0.6s;
-    opacity: 0.7;
+    border: 2px solid #ffffff;
 }

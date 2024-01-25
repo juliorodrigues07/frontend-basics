@@ -43,3 +43,9 @@
     border-radius: 40px;
     /* flex-shrink: 0; */
 }
+
+.disclaimer .sub-button button:hover
+{
+    transition: 0.8s;
+    opacity: 0.7;
+}
