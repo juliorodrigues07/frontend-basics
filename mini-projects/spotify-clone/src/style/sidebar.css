@@ -1,13 +1,11 @@
 body
 {
     background-color: #000000;
+    font-family: var(--font-dm-sans);
 }
 
 .sidebar
 {
-    /* top: 0;
-    left: 0;
-    bottom: 0; */
     padding: 12px;
     position: fixed;
     width: 400px;
@@ -23,7 +21,6 @@ body
 .logo
 {
     background: #121212;
-    /* display: flex; */
     border-radius: 8px;
     padding: 16px 0 0 16px;
 }
@@ -41,15 +38,14 @@ body
 
 .sidebar_navigation ul li
 {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .sidebar nav ul li a
 {
     color: #b3b3b3;
     font-weight: 600;
-    font-size: 14px;
-    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -59,12 +55,17 @@ body
     opacity: 0.7;
 }
 
+.sidebar nav ul li a span
+{
+    margin-right: 10px;
+}
+
 .library
 {
+    /* height: 68vh; */
     background-color: #121212;
     border-radius: 8px;
     display: flex;
-    /* justify-content: space-between; */
     flex-direction: column;
     padding: 4px 8px;
     color: #b3b3b3;
@@ -82,18 +83,11 @@ body
 
 .library .library_content .library_button
 {
-    /* display: flex;
-    margin-right: 10px; */
     color: #b3b3b3;
     background-color: transparent;
     border: 0px;
     font-size: 14px;
     font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
-    /* text-align: center;
-    text-decoration: none;
-    text-transform: none;
-    padding: 20px, 10px; */
 }
 
 .library .library_content .add_button
@@ -112,8 +106,6 @@ body
 {
     font-size: 20px;
     font-weight: 300;
-    /* color: #b3b3b3;
-    margin-right: 10px; */
     padding-right: 8px;
 }
 
@@ -127,16 +119,9 @@ body
 .playlist-section,
 .podcast-section
 {
-    /* display: flex;
-    align-items: flex-start;
-    justify-content: space-between; */
     margin-bottom: 10px;
     gap: 20px;
     background-color: #242424;
-    /* color: #b3b3b3;
-    font-weight: 600;
-    font-size: 14px; */
-    /* margin: 8px 0; */
     padding: 16px 20px;
     border-radius: 10px;
 }
@@ -172,19 +157,13 @@ body
 .playlist-section .playlist-section_content .playlist-section_button,
 .podcast-section .podcast-section_content .podcast-section_button
 {
-    /* display: flex;
-    justify-content: center; */
     background-color: #ffffff;
-    /* color: #000; */
     border-radius: 20px;
     font-size: 12px;
     font-weight: 700;
     font-family: "DM Sans", sans-serif;
-    /* text-decoration: none;
-    text-transform: none; */
     padding: 10px;
     margin-top: 10px;
-    /* margin: 12px; */
     border: 0;
     width: 50%;
 }
@@ -198,10 +177,6 @@ body
 
 .library .outer-links
 {
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content: center; */
-    /* justify-content: space-evenly; */
     margin: 25px 20px;
 }
 
@@ -223,7 +198,6 @@ body
 
 .library .languages .languages_button
 {
-    /* align-items: center; */
     background-color: transparent;
     border: 1px solid #878787;
     color: #ffffff;
