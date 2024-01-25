@@ -1,0 +1,241 @@
+body
+{
+    background-color: #000000;
+}
+
+.sidebar
+{
+    /* top: 0;
+    left: 0;
+    bottom: 0; */
+    padding: 12px;
+    position: fixed;
+    width: 400px;
+}
+
+.sidebar_navigation
+{
+    background: #121212;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+
+.logo
+{
+    background: #121212;
+    /* display: flex; */
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+
+.sidebar_navigation .logo img
+{
+    width: 80px;
+}
+
+.sidebar nav ul
+{
+    margin-top: 20px;
+    padding: 0 20px 10px 20px;
+}
+
+.sidebar_navigation ul li
+{
+    padding: 10px 0;
+}
+
+.sidebar nav ul li a
+{
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+}
+
+.sidebar nav ul li a:hover
+{
+    transition: 0.6s;
+    opacity: 0.7;
+}
+
+.library
+{
+    background-color: #121212;
+    border-radius: 8px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    padding: 4px 8px;
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.library .library_content
+{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.library .library_content .library_button
+{
+    /* display: flex;
+    margin-right: 10px; */
+    color: #b3b3b3;
+    background-color: transparent;
+    border: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    /* text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    padding: 20px, 10px; */
+}
+
+.library .library_content .add_button
+{
+    color: #b3b3b3;
+    background-color: transparent;
+    border: 0px;
+}
+
+.library .library_content .fa-plus
+{
+    margin: 24px 10px;
+}
+
+.library .library_content .library_button .fa
+{
+    font-size: 20px;
+    font-weight: 300;
+    /* color: #b3b3b3;
+    margin-right: 10px; */
+    padding-right: 8px;
+}
+
+.library .library_content .library_button:hover,
+.library .library_content .add_button:hover
+{
+    transition: 0.6s;
+    opacity: 0.7;
+}
+
+.playlist-section,
+.podcast-section
+{
+    /* display: flex;
+    align-items: flex-start;
+    justify-content: space-between; */
+    margin-bottom: 10px;
+    gap: 20px;
+    background-color: #242424;
+    /* color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px; */
+    /* margin: 8px 0; */
+    padding: 16px 20px;
+    border-radius: 10px;
+}
+
+.playlist-section .playlist-section_content,
+.podcast-section .podcast-section_content
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-section .playlist-section_content .text,
+.podcast-section .podcast-section_content .text
+{
+    padding-bottom:14px;
+    color:#FFF;
+    font-family: "DM Sans", sans-serif;
+}
+
+.playlist-section .playlist-section_content .title,
+.podcast-section .podcast-section_content .title
+{
+    font-weight: 700;
+}
+
+.playlist-section .playlist-section_content .subtitle,
+.podcast-section .podcast-section_content .subtitle
+{
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.playlist-section .playlist-section_content .playlist-section_button,
+.podcast-section .podcast-section_content .podcast-section_button
+{
+    /* display: flex;
+    justify-content: center; */
+    background-color: #ffffff;
+    /* color: #000; */
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    /* text-decoration: none;
+    text-transform: none; */
+    padding: 10px;
+    margin-top: 10px;
+    /* margin: 12px; */
+    border: 0;
+    width: 50%;
+}
+
+.playlist-section .playlist-section_content .playlist-section_button:hover,
+.podcast-section .podcast-section_content .podcast-section_button:hover
+{
+    transition: 0.6s;
+    opacity: 0.7;
+}
+
+.library .outer-links
+{
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* justify-content: space-evenly; */
+    margin: 25px 20px;
+}
+
+.library .outer-links a
+{
+    padding: 10px;
+    display:inline-block;
+    color: #b3b3b3;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.library .outer-links a:hover
+{
+    text-decoration: underline;
+}
+
+.library .languages .languages_button
+{
+    /* align-items: center; */
+    background-color: transparent;
+    border: 1px solid #878787;
+    color: #ffffff;
+    width: 30%;
+    font-weight: bold;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.library .languages .languages_button:hover
+{
+    transition: 0.6s;
+    opacity: 0.7;
+}
