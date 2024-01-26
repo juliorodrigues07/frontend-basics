@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel public/index.html"
+    "start": "parcel public/index.html & json-server --watch src/fake_artists_api/artists.json --port 3000"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "parcel": "^2.11.0"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
   }
 }
