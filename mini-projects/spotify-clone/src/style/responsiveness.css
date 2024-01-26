@@ -1,0 +1,31 @@
+@media screen and (max-width: 1650px) 
+{
+    .playlist-container .offer_items-list 
+    {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1400px) 
+{
+    .playlist-container .offer_items-list 
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1150px) 
+{
+    .playlist-container .offer_items-list 
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) 
+{
+    .playlist-container .offer_items-list 
+    {
+        grid-template-columns: 1fr;
+    }
+}
