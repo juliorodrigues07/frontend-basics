@@ -3,12 +3,6 @@
     display: none;
 }
 
-/* .artist {
-    --column-count: 5;
-    --grid-gap: 24px;
-    --min-container-width: 372px;
-} */
-
 .grid-container
 {
     display: grid;
@@ -24,12 +18,7 @@
 {
     background: linear-gradient(to bottom, #509bf5, #7801ff);
     border-radius: 8px;
-    /* -ms-flex: 1;
-    flex: 1;
-    isolation: isolate; */
-    /* margin-left: 20px; */
     padding: 16px;
-    /* position: relative; */
     transition: background-color 0.3s ease;
     width: 80%;
 }
@@ -43,16 +32,12 @@
 {
     padding-bottom: 100%;
     position: relative;
-    /* width: 100%; */
     margin-bottom: 16px;
 }
 
 .artist-img
 {
-    /* height: 100%; */
-    /* left: 0; */
     position: absolute;
-    /* top: 0; */
     width: 100%;
     border-radius: 50%;
 }
@@ -68,17 +53,8 @@
     min-height: 62px;
 }
 
-/* .card-text a
-{
-    display: inline-block;
-    max-width: 100%;
-    vertical-align: middle;
-} */
-
 .artist-name
 {
-    /* box-sizing: border-box;
-    margin-block: 0px; */
     font-size: 1rem;
     font-weight: 700;
     padding-block-end: 8px;
@@ -91,11 +67,6 @@
     font-size: 0.875rem;
 }
 
-/* .play
-{
-    position: relative;
-} */
-
 .play .fa-play
 {
     position: absolute;
@@ -104,7 +75,6 @@
     padding: 18px;
     background-color: #1db954;
     border-radius: 100%;
-    /* font-size: 14px; */
     opacity: 0;
     transition: all ease 0.4s;
 }
