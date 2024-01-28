@@ -1,0 +1,116 @@
+.header_navigation
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin-top: 12px;
+    max-width: 100%;
+    margin-left: 420px;
+    margin-right: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--bg-elements-color);
+    /* padding: 15px; */
+}
+
+.header_navigation .navigation
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_navigation .navigation .arrow-left
+{
+    margin-right: 0.5rem;
+}
+
+.header_navigation .navigation .arrow-left,
+.header_navigation .navigation .arrow-right
+{
+    width: 32px;
+    height: 32px;
+    background-color: var(--bg-arrow-color);
+    border-radius: 50%;
+}
+
+.header_navigation .navigation .arrow-left:hover,
+.header_navigation .navigation .arrow-right:hover
+{
+    opacity: 0.8;
+    transition: 0.7s;
+}
+
+.header_navigation .header_search
+{
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 48px;
+    margin-left: 8px;
+    margin-right: 10px;
+    background-color: #242424;
+    border-radius: 500px;
+    border: 2px solid transparent;
+}
+
+.header_navigation .header_search:hover
+{
+    background-color: #353535;
+}
+
+.header_navigation .header_search:focus-within
+{
+    border: 2px solid #ffffff;
+}
+
+.header_navigation .header_search img
+{
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+
+.header_navigation .header_search input
+{
+    background: transparent;
+    border: none;
+    padding: 0 0 0 12px;
+    color: #ffffff;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: none;
+}
+
+.header_navigation .header_login
+{
+    display: flex;
+}
+
+.header_navigation .header_login .signup
+{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #242424;
+    margin-right: 15px;
+    width: 100px;
+    border-radius: 40px;
+}
+
+.header_navigation .header_login .login
+{
+    width: 100px;
+    height: 48px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 40px;
+}
+
+.header_navigation .header_login .signup:hover,
+.header_navigation .header_login .login:hover
+{
+    transform: scale(1.04);
+}
