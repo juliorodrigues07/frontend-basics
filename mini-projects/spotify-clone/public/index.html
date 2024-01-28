@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../src/style/sidebar.css">
     <link rel="stylesheet" href="../src/style/header_bar.css">
     <link rel="stylesheet" href="../src/style/playlists.css">
+    <link rel="stylesheet" href="../src/style/search_grid.css">
     <link rel="stylesheet" href="../src/style/footer.css">
     <link rel="stylesheet" href="../src/style/responsiveness.css">
 
@@ -87,6 +88,7 @@
                 </div>
             </section>
             
+            <!-- TODO: Fix aligning and responsiveness in this section -->
             <div class="outer-links">
                 <a href="">Legal</a>
                 <a href="">Privacy Center</a>
@@ -108,6 +110,7 @@
         </div>
     </div>
 
+    <!-- TODO: Rework responsiveness to small in width devices and positioning (overlaping sidebar) -->
     <main>
         <div class="header">
             <nav class="header_navigation">
@@ -325,23 +328,7 @@
                 </div>
 
                 <div id="result-artist" class="hidden">
-                    <div class="grid-container">
-                        <div class="artist-card">
-                            
-                            <div class="card-img">
-                                <img id="artist-img" class="artist-img">
-                                <div class="play">
-                                    <span class="fa fa-solid fa-play"></span>
-                                </div>
-                            </div>
-                            
-                            <div class="card-text">
-                                <a title="Pink Floyd" class="vst" href=""></a>
-                                <span class="artist-name" id="artist-name"></span>
-                                <span class="genre">Artista</span>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="grid-container" id="artists-grid"></div>
                 </div>
 
             </div>

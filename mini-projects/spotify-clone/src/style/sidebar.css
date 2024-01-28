@@ -4,12 +4,19 @@ body
     font-family: var(--font-dm-sans);
 }
 
+main
+{
+    margin-bottom: 90px;
+}
+
 .sidebar
 {
     top: 0;
     padding: 12px;
     position: fixed;
     width: 400px;
+    bottom: 85px;
+    overflow-y: auto;
 }
 
 .sidebar_navigation
@@ -63,7 +70,7 @@ body
 
 .library
 {
-    height: 67.5vh;
+    height: 100vh;
     background-color: var(--bg-elements-color);
     border-radius: 8px;
     display: flex;
@@ -172,8 +179,7 @@ body
 .playlist-section .playlist-section_content .playlist-section_button:hover,
 .podcast-section .podcast-section_content .podcast-section_button:hover
 {
-    transition: 0.6s;
-    opacity: 0.7;
+    transform: scale(1.04);
 }
 
 .library .outer-links

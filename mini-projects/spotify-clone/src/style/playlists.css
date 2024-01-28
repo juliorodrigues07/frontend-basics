@@ -1,6 +1,6 @@
 .playlist-container
 {
-    height: 78.5vh;
+    height: 79vh;
     padding-top: 16px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -33,8 +33,8 @@
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 30px;
+    /* margin-bottom: 16px; */
 }
 
 .playlist-container .offer_items-list .cards
@@ -45,10 +45,6 @@
     /* Truncante img dimensions */
     overflow: hidden;
     border-radius: 8px;
-}
-
-.playlist-container .offer_items-list .cards 
-{
     background: linear-gradient(to bottom, #7801ff, #509bf5);
 }
 
@@ -73,6 +69,12 @@
     bottom: 0;
     width: 100px;
     transform: rotate(25deg) translate(18%, -2%);
+    transition: all 0.4s ease-in-out;
+}
+
+.playlist-container .offer_items-list .cards:hover img
+{
+    padding: 25px;
 }
 
 .offer_scroll-container .more-info
@@ -119,123 +121,4 @@
 {
     font-size: 0.8rem;
     color: #757575;
-}
-
-.hidden
-{
-    display: none;
-}
-
-/* .artist {
-    --column-count: 5;
-    --grid-gap: 24px;
-    --min-container-width: 372px;
-} */
-
-.grid-container
-{
-    display: grid;
-    gap: 24px;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    max-width: 767px;
-}
-
-.artist-card
-{
-    background: #181818;
-    border-radius: 8px;
-    /* -ms-flex: 1;
-    flex: 1;
-    isolation: isolate; */
-    padding: 16px;
-    /* position: relative; */
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-.artist-card:hover
-{
-    background-color: #252525;
-}
-
-.card-img
-{
-    padding-bottom: 100%;
-    position: relative;
-    /* width: 100%; */
-    margin-bottom: 16px;
-}
-
-.artist-img 
-{
-    /* height: 100%;
-    left: 0; */
-    position: absolute;
-    /* top: 0; */
-    width: 100%;
-    border-radius: 50%;
-}
-
-.card-text 
-{
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    min-height: 62px;
-}
-
-/* .card-text a
-{
-    display: inline-block;
-    max-width: 100%;
-    vertical-align: middle;
-} */
-
-.artist-name 
-{
-    /* box-sizing: border-box;
-    margin-block: 0px; */
-    font-size: 1rem;
-    font-weight: 700;
-    padding-block-end: 8px;
-}
-
-.genre 
-{
-    color: #8b8b8b;
-    font-weight: 400;
-    font-size: 0.875rem;
-}
-
-/* .play
-{
-    position: relative;
-} */
-  
-.play .fa-play
-{
-    position: absolute;
-    right: 10px;
-    top: 120px;
-    padding: 18px;
-    background-color: #1db954;
-    border-radius: 100%;
-    /* font-size: 14px; */
-    opacity: 0;
-    transition: all ease 0.4s;
-}
-  
-.artist-card:hover .play .fa-play 
-{
-    opacity: 1;
-    transform: translateY(-20px);
-}
-  
-.play .fa-play:hover
-{
-    padding: 20px;
-    cursor: pointer;
 }
