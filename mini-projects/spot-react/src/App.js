@@ -1,26 +1,28 @@
-import logo from './logo.svg';
+import { useState } from "react";
 import './general/reset.css';
 import './general/vars.css';
+import Sidebar from './components/Sidebar/Sidebar';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import PlaylistGrid from './components/Main/PlaylistGrid';
+import SearchList from "./components/Main/SearchList";
 import './App.css';
+import './general/responsiveness.css';
 
-function App() {
+function App() 
+{
+  const [results, setResults] = useState({'data': [], 'status': false});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Sidebar/>
+    <main>
+        <Header setResults={setResults}/>
+        {!results.status && <PlaylistGrid results={results.data}/>}
+        {results.status && <SearchList results={results.data}/>}
+    </main>
+    <Footer/>
+    </>
   );
 }
 
