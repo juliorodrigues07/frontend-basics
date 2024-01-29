@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import smallRight from '../../assets/icons/small-left.png';
+import smallRight from '../../assets/icons/small-right.png';
 import smallLeft from '../../assets/icons/small-left.png';
 import searchIcon from '../../assets/icons/search.png';
 import '../../general/reset.css';
