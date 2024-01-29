@@ -22,9 +22,13 @@ Repository for initial studies in Front-End, developing didactic mini-projects w
 
 # Future Steps
 
-- [ ] Improve code best practices and programming style;
+- [ ] Add/Enhance designs responsiveness;
 
-- [ ] Rebuild the projects using Vue.js or React;
+- [ ] Improve code best practices and programming style (consider migrating to TypeScript);
+
+- [ ] Enhance designs UX oriented (colors, animations, aligning, ...);
+
+- [ ] Rebuild some projects using Vue.js or React;
 
 - [ ] Add new functionalities;
 
